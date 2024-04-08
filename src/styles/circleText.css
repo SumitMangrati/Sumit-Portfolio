@@ -1,0 +1,17 @@
+.text{
+    animation: anim 10s linear infinite;
+}
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+.text span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+}
