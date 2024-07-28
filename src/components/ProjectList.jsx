@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Projects from "../constants/Projects";
 import { motion, useSpring } from "framer-motion";
+import { Link } from "react-router-dom";
+
 function ProjectList() {
   const [img, setImg] = useState({
     src: "",
@@ -39,6 +41,7 @@ function ProjectList() {
           <ul className="w-full border-none">
             {Projects.map((item) => {
               return (
+                < Link to = {item.link} >
                 <li
                   key={item.label}
                   onMouseEnter={() => {
@@ -56,11 +59,12 @@ function ProjectList() {
                     });
                   }}
                   className="flex align-middle justify-between
-                  w-full text-sm"
+                  w-full text-sm border-b-[1px] border-secondary py-4"
                 >
                   <p>{item.label}</p>
                   <p>{item.type}</p>
                 </li>
+                </Link>
               );
             })}
             <div></div>

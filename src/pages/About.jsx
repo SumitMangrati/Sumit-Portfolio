@@ -10,7 +10,7 @@ function About() {
 
 
   return (
-    <div className='h-[235vh] w-[100vw] bg-primary'>
+    <div className='h-[295vh] sm:h-[235vh] w-[100vw] bg-primary'>
         < Navbar />
         < AboutCont />
         < Tech />
